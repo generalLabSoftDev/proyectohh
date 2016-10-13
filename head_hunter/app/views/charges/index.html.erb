@@ -1,0 +1,27 @@
+<h1>Lista de Cargos</h1>
+ 
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Cliente</th>
+    <th>Area</th>
+    <th>Sede</th>
+    <th>Idioma</th>
+    <th>Tiempo</th>
+    <th>Anos de Experiencia</th>
+  </tr>
+ 
+  <% @charge.each do |charge| %>
+    <tr>
+      <td><%= charge.nombre %></td>
+      <td><%= charge.cliente %></td>
+      <td><%= charge.area %></td>
+      <td><%= charge.sede %></td>
+      <td><%= charge.idioma %></td>
+      <td><%= charge.time %></td>
+      <td><%= charge.anosexp%></td>
+
+      <td><%= link_to 'Show', charge_path(charge) %></td>
+    </tr>
+  <% end %>
+</table>
