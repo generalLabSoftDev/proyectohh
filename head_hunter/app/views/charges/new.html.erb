@@ -1,0 +1,40 @@
+<h1>Nuevo Cargo</h1>
+
+<%= form_for :charge, url: charges_path do |f| %>
+  <p>
+    <%= f.label :nombre %>
+    <%= f.text_field :nombre %>
+  </p>
+      <p>
+    <%= f.label :cliente %>
+    <%= f.text_field :cliente %>
+  </p>
+    <p>
+    <%= f.label :area %>
+    <%= f.text_field :area %>
+  </p>
+      <p>
+    <%= f.label :sede %>
+    <%= f.text_field :sede %>
+  </p>
+
+      <p>
+    <%= f.label :idioma %>
+    <%= f.text_field :idioma %>
+  </p>
+
+      <p>
+    <%= f.label :tiempo %>
+    <%= f.date_field :time %>
+  </p>
+
+      <p>
+    <%= f.label "Anos de Experiencia" %>
+    <%= f.text_field :anosexp%>
+  </p>
+
+    <p>
+
+    <%= f.submit %>
+  </p>
+<% end %>
