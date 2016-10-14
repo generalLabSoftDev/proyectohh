@@ -1,5 +1,7 @@
 <h1>Lista de Cargos</h1>
  
+ <%= link_to 'Nuevo Cargo', new_charge_path %>
+
 <table>
   <tr>
     <th>Nombre</th>
@@ -21,7 +23,11 @@
       <td><%= charge.time %></td>
       <td><%= charge.anosexp%></td>
 
-      <td><%= link_to 'Show', charge_path(charge) %></td>
+      <td><%= link_to 'Mostrar', charge_path(charge) %></td>
+      <td><%= link_to 'Editar', edit_charge_path(charge) %></td>
+      <td><%= link_to 'Eliminar', charge_path(charge),
+              method: :delete,
+              data: { confirm: 'Estas seguro?' } %></td>
     </tr>
   <% end %>
 </table>

@@ -1,32 +1,65 @@
-<p>
-  <strong>Nombre:</strong>
-  <%= @charge.nombre%>
-</p>
+<div class="container boxe1">
+  <h2>Perfil de Cargo:  <%= @charge.nombre %> </h2>
+  <p><%= link_to 'Editar Perfil', edit_charge_path(@charge) %>  - / -  <%= link_to 'Eliminar Perfil', charge_path(@charge),
+                                                                                  method: :delete,
+                                                                                  data: { confirm: 'Esta a punto de eliminar el perfil y las competencias asociadas' } %></p>            
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Cliente</th>
+        <th>Area</th>
+        <th>Sede</th>
+        <th>Idioma</th>
+        <th>Tiempo</th>
+        <th>Experiencia</th>
+        <th>Educacion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @charge.nombre %></td>
+        <td><%= @charge.cliente %></td>
+        <td><%= @charge.area %> </td>
+        <td><%= @charge.sede %> </td>
+        <td><%= @charge.idioma %></td>
+        <td><%= @charge.time %></td>
+        <td><%= @charge.anosexp %></td>
+        <td><%= @charge.educacion %></td>
+      </tr>
+    </tbody>
+  </table>
 
-<p>
-  <strong>Cliente:</strong>
-  <%= @charge.cliente%>
-</p>
- 
-<p>
-  <strong>Area:</strong>
-  <%= @charge.area %>
-</p>
 
-<p>
-  <strong>Sede:</strong>
-  <%= @charge.sede%>
-</p>
-<p>
-  <strong>Idioma:</strong>
-  <%= @charge.idioma%>
-</p>
+<h2>Competencias de <%= @charge.nombre %> </h2>
 
-<p>
-  <strong>Tiempo:</strong>
-  <%= @charge.time%>
-</p>
-<p>
-  <strong>Anos de Experiencia:</strong>
-  <%= @charge.anosexp%>
-</p>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Descripcion</th>
+        <th>Nivel</th>
+        <th>tags</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @charge.competencies.each do |competency| %>
+      <tr>
+        <td><%= competency.descripcion%></td>
+        <td><%= competency.nivel %></td>
+        <td><%= competency.tag %> </td>
+
+         <td>  <%= link_to 'Eliminar', [competency.charge, competency],
+               method: :delete,
+               data: { confirm: 'seguro?' } %> </td> 
+         
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+
+
+<%= render 'competencies/form' %>
+
+
+</div>

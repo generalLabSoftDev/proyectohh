@@ -1,0 +1,96 @@
+
+      <%= form_for @charge do |f| %>
+
+      <% if @charge.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@charge.errors.count, "error") %> El cargo no se pudo crear debido a:
+          </h2>
+          <ul>
+            <% @charge.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+
+<div class="container">
+  
+<!-- begins the mini menu -->
+   <ul class="nav nav-tabs nav-justified"> 
+    <li class="active pill"><a data-toggle="tab" href="#perfil">Datos del Perfil</a></li>
+  </ul>
+<!-- ends mini menu -->
+
+  <div class="panel panel-default">
+  <div class="panel-body">
+
+<!-- begins tabs content -->
+  <div class="tab-content"> 
+  <!-- Perfil content -->
+  <div id="perfil" class="row tab-pane fade in active">
+
+     <div class="form-horizontal">
+
+          <div class="form-group" align="center" >
+            <label class="control-label col-md-2" > <%= f.label :nombre %> </label>
+            <div class="col-md-4"> <%= f.text_field :nombre %> </div>
+          
+
+            <label class="control-label col-md-2" > <%= f.label :cliente %> </label>
+            <div class="col-md-4"> <%= f.text_field :cliente %> </div>
+
+          </div>
+
+          <div class="form-group" align="center" >
+
+            <label class="control-label col-md-2" > <%= f.label :area %> </label>
+            <div class="col-md-4"> <%= f.text_field :area %> </div>
+
+            <label class="control-label col-md-2" > <%= f.label :sede %> </label>
+            <div class="col-md-4"> <%= f.text_field :sede %> </div>
+
+          </div>
+
+          <div class="form-group" align="center" >
+
+            <label class="control-label col-md-2" > <%= f.label :idioma %> </label>
+            <div class="col-md-4"> <%= select_tag 'charge[idioma]', '<option>Español</option><option>English</option><option>Français</option><option>Deutsch</option><option>Português</option><option>Русский</option><option>العربية</option><option>普通话</option><option>日本語 </option><option>हिन्दी</option><option>Otro</option>'.html_safe  %></div>
+
+             <label class="control-label col-md-2" > <%= f.label :tiempo %> </label>
+             <div class="col-md-4"><%= f.date_field :time %> </div>
+
+          </div>
+
+          <div class="form-group" align="center" >
+
+            <label class="control-label col-md-2" > <%= f.label :"Anos de Experiencia" %> </label>
+            <div class="col-md-4"> <%= f.text_field :anosexp%> </div>
+
+             <label class="control-label col-md-2" > <%= f.label :"Nivel de Educacion" %> </label>
+            <div class="col-md-4"> <%= select_tag 'charge[educacion]', '<option>Bachiller</option><option>Tecnico Superior</option><option>Universitario</option><option>Maestria</option><option>Doctorado</option><option>Ninguno</option>'.html_safe  %></div>
+
+          </div>
+
+          <div class="form-group" align="center" >
+
+          <label> <%= f.submit :Guardar %> </label>
+
+          </div>
+
+        
+
+    </div>
+  </div>
+
+
+</div> <!-- end tabs content -->
+
+</div>
+</div>
+</div>
+
+  <% end %>
+
+
