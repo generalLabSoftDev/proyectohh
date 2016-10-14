@@ -1,0 +1,73 @@
+<%= form_for([@charge, @charge.competencies.build]) do |f| %>
+
+      <% if @charge.competencies.build.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@charge.competencies.build.errors.count, "error") %> El cargo no se pudo crear debido a:
+          </h2>
+          <ul>
+            <% @charge.competencies.build.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+
+<div class="container">
+  
+<!-- begins the mini menu -->
+   <ul class="nav nav-tabs nav-justified"> 
+    <li class="active pill"><a data-toggle="tab" href="#perfil">Datos de la Competencia</a></li>
+  </ul>
+<!-- ends mini menu -->
+
+  <div class="panel panel-default">
+  <div class="panel-body">
+
+<!-- begins tabs content -->
+  <div class="tab-content"> 
+  <!-- Perfil content -->
+  <div id="perfil" class="row tab-pane fade in active">
+
+
+     <div class="form-horizontal">
+
+          <div class="form-group" align="center" >
+            <label class="control-label col-md-2" > <%= f.label :descripcion %> </label>
+            <div class="col-md-4"> <%= f.text_area :descripcion %> </div>
+          
+
+            <label class="control-label col-md-2" > <%= f.label :nivel %> </label>
+            <div class="col-md-4"> <%= select_tag 'competency[nivel]', '<option>Basico</option><option>Intermedio</option><option>Experto</option>'.html_safe  %></div>
+
+          </div>
+
+          <div class="form-group" align="center" >
+
+            <label class="control-label col-md-2" > <%= f.label :"Palabras Claves" %> </label>
+            <div class="col-md-4"> <%= f.text_field :tag %> </div>
+
+
+          </div>
+
+
+          <div class="form-group" align="center" >
+
+          <label> <%= f.submit :Guardar %> </label>
+
+          </div>
+
+        
+
+    </div>
+  </div>
+
+
+</div> <!-- end tabs content -->
+
+</div>
+</div>
+</div>
+
+  <% end %>

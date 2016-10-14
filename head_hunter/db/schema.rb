@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161012234721) do
+ActiveRecord::Schema.define(version: 20161013223248) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,10 +21,22 @@ ActiveRecord::Schema.define(version: 20161012234721) do
     t.string   "area"
     t.string   "sede"
     t.string   "idioma"
-    t.date     "time"
     t.integer  "anosexp"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date     "time"
+    t.string   "educacion"
   end
 
+  create_table "competencies", force: :cascade do |t|
+    t.text     "descripcion"
+    t.string   "nivel"
+    t.json     "tag"
+    t.integer  "charge_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["charge_id"], name: "index_competencies_on_charge_id", using: :btree
+  end
+
+  add_foreign_key "competencies", "charges"
 end

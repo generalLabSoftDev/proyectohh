@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  descripcion: MyText
+  nivel: MyString
+  tag: 
+  charge: one
+
+two:
+  descripcion: MyText
+  nivel: MyString
+  tag: 
+  charge: two
