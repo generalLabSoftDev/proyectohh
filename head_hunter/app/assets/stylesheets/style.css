@@ -8,6 +8,24 @@
 /* Begins Extra Styles */
 
 
+.glyphicon:hover {
+  color:#55ACEE;
+}
+
+.glyphicon:focus {
+ color:#55ACEE;
+}
+
+
+
+.table-bordered > thead {
+  background-color: #55ACEE;
+  color: #fff;
+}
+
+.container > h2 {
+  color:#55ACEE;;
+}
 
 .boxe1 
 {
@@ -26,7 +44,7 @@ html {
 }
 body {
   margin: 0;
-  background: url(/images/fondo6.jpg) ;
+  /*background: url(/images/fondo6.jpg) ; */
   background-size: cover;
 }
 article,
@@ -331,6 +349,7 @@ span.forg a:hover{
   }
   thead {
     display: table-header-group;
+
   }
   tr,
   img {
@@ -374,8 +393,8 @@ span.forg a:hover{
 @font-face {
   font-family: 'Glyphicons Halflings';
 
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('/assets/glyphicons-halflings-regular.eot');
+  src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff2') format('woff2'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -1445,7 +1464,7 @@ mark,
   text-transform: capitalize;
 }
 .text-muted {
-  color: #777;
+  color: #FFF;
 }
 .text-primary {
   color: #337ab7;
@@ -4605,10 +4624,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #badbfc;
+  background-color: #55ACEE;
 }
 .navbar-default .navbar-brand {
-  color: #777;
+  color: #FFF;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -4619,7 +4638,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #777;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #777;
+  color: #FFF;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {

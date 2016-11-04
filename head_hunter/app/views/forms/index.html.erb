@@ -1,0 +1,29 @@
+<h2>Lista de Peticiones</h2>
+ 
+ <%= link_to '<button class="btn btn-primary" > Nueva Peticion </button>'.html_safe, new_form_path %>
+<br>
+<br>
+
+<table  class="table table-bordered" >
+<thead>
+  <tr>
+    <th>Descripcion</th>
+    <th>Ver</th>
+    <th>Editar</th>
+    <th>Eliminar</th>
+  </tr>
+</thead>
+ <tbody>
+  <% @form.each do |form| %>
+
+    <tr>
+      <td><%= form.descripcion %></td>
+      <td><%= link_to '<span class="glyphicon glyphicon-eye-open" ></span>'.html_safe, form_path(form) %></td>
+      <td><%= link_to '<span class="glyphicon glyphicon glyphicon-pencil" ></span>'.html_safe, edit_form_path(form) %></td>
+      <td><%= link_to '<span class="glyphicon glyphicon glyphicon-trash" ></span>'.html_safe, form_path(form),
+              method: :delete,
+              data: { confirm: 'Estas seguro?' } %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
