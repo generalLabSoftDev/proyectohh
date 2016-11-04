@@ -1,8 +1,12 @@
-<div class="container boxe1">
+
   <h2>Perfil de Cargo:  <%= @charge.nombre %> </h2>
-  <p><%= link_to 'Editar Perfil', edit_charge_path(@charge) %>  - / -  <%= link_to 'Eliminar Perfil', charge_path(@charge),
+  <div><%= link_to '<button class="btn btn-primary" > Editar Cargo </button>'.html_safe, edit_charge_path(@charge) %>          <%= link_to '<button class="btn btn-danger" > Eliminar Cargo </button>'.html_safe, charge_path(@charge),
                                                                                   method: :delete,
-                                                                                  data: { confirm: 'Esta a punto de eliminar el perfil y las competencias asociadas' } %></p>            
+                                                                                  data: { confirm: 'Esta a punto de eliminar el perfil y las competencias asociadas' } %>
+                                                                                  </div>
+
+<br>
+<br>            
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -62,4 +66,3 @@
 <%= render 'competencies/form' %>
 
 
-</div>
