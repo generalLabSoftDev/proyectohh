@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>HeadHunter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="include/css/bootstrap.css">
+  <link rel="stylesheet" href="include/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="include/js/jquery.js"></script>
+  <script src="include/js/bootstrap.min.js"></script>
+</head>
+<body style="margin-bottom:60px;" >
+
+<!-- MENU -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>cre
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="">Headhunters</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li data-toggle="modal" data-target="#myModalinit"><a href="#">Iniciar Sesión</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Ends MENU -->
+<!-- FOOTER 
+<nav class="navbar navbar-default navbar-fixed-bottom" >
+  <div class="container">
+    <p class="text-muted" align="middle"> Creado por los estudiantes del Laboratorio General del Desarrollo de Software. 2016</p>
+    </div>
+</nav>
+<!-- Ends FOOTER -->
+
+ <div class="jumbotron text-center">
+	<img id="ban" src="/images/logo.png" class="img-responsive" >
+  
+  </div>  
+
+
+
+<div class="container">
+ 
+    <div class="row">
+
+        <div class="col-md-6 h_regi">
+          <center>
+            <h2>¿Buscando Empleo?</h2>
+            <h3> Registrate Aquí:</h3>
+            <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModalreg">Registrarse como Aspirante</button>
+          </center>
+        </div>
+
+        <div class="col-md-6 h_regd">
+            <center>
+            <h2>¿Empresa con cargos disponibles?</h2>
+            <h3> Registrate Aquí:</h3>
+            <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModalregemp">Registrarse como Empresa</button>
+            </center>
+        </div>
+
+
+    </div>
+      
+</div>
+
+
+  <!--Modals-->
+
+    <!-- Iniciar Sesión -->
+  <div class="modal fade" id="myModalinit" role="dialog" >
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+
+        <div class="modal-header" style="color: white; background-color: #006bb3">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+          <h4 class="modal-title text-center" >Iniciar Sesión</h4>
+        </div>
+
+    <div id="modi" class="modal-body" >
+<!-- Body Content-->
+     <form>
+
+      <div class="form-group">
+        <label for="correo_ini"><i class="fa fa-user"></i> Correo:</label>
+        <input type="email" class="form-control" id="correo_ini" placeholder="correo@gmail.com" required>
+      </div>
+
+      <div class="form-group">
+          <label for="pass_ini"><i class="fa fa-eye"></i> Contraseña:</label>
+          <input type="password" class="form-control" id="pass_ini" required>  
+      </div>
+
+      <div class="form-group">
+      <button type="submit" id="b_inic" class="btn btn-success btn-block" data-dismiss="modal">Iniciar Sesión</button>
+      </div>
+    </form>
+<!-- Ends Body Content-->
+    </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <span class="forg"><a href="#">¿Olvidaste tu contraseña?</a></span>
+
+        </div>
+      </div>
+      
+    </div>
+  </div><!-- Ends Modal Inicio S-->
+
+
+
+  <!--Registrarse como Aspirante-->
+
+  <div class="modal fade" id="myModalreg" role="dialog" >
+    <div class="modal-dialog ">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+
+        <div class="modal-header" style="color: white; background-color: #006bb3">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+          <h4 class="modal-title text-center" >Registro - Aspirante</h4>
+        </div>
+
+    <div id="mod_reg" class="modal-body" >
+<!-- Body Content-->
+     <form class="form-horizontal">
+
+      <div class="form-group">
+          <label>Nombres:</label>
+          <input type="text" class="form-control" name="fname" placeholder="Juan Andres" required>
+      </div>
+
+      <div class="form-group">
+        <label >Apellidos:</label>
+          <input type="text" class="form-control" name="lname" placeholder="Perez Rodríguez" required>
+        
+      </div>
+
+      <div class="form-group">
+        <label >Cédula de Identidad:</label>
+          <input type="text" class="form-control" name="lname" placeholder="12.345.678" required>
+        
+      </div>
+
+      <div class="form-group">
+        <label for="lists" >Sexo:</label>
+          <select id="lists" class="form-control">
+            <option value="Maculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+          </select>
+        
+      </div>
+
+      <div class="form-group">
+        <label >Fecha de Nacimiento:</label>
+          <input type="date" class="form-control" name="bdate" required>
+        
+      </div>
+
+      <div class="form-group">
+        <label >Correo:</label>
+          <input type="email" class="form-control" name="mail" placeholder="name@example.com" required>
+        
+      </div>
+
+      <div class="form-group">
+        <label>Contraseña:</label>
+          <input type="password" class="form-control" name="pass" required>
+        
+      </div>
+
+      <div class="form-group">
+        <label >Confirmar Contraseña:</label>
+          <input type="password" class="form-control" name="pass_c" required>
+        
+      </div>
+    </form>
+<!-- Ends Body Content-->
+    </div>
+
+        <div class="modal-footer">
+          <center>
+          <button type="submit" class="btn btn-success btn-block" data-dismiss="modal">Registrarse</button>
+          </center>
+        </div>
+      </div>
+      
+    </div>
+  </div><!-- Ends Modal Reg Asp-->
+
+
+
+
+  <!--Registrarse como Empresa-->
+
+  <div class="modal fade" id="myModalregemp" role="dialog" >
+    <div class="modal-dialog ">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+
+        <div class="modal-header" style="color: white; background-color: #006bb3">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+          <h4 class="modal-title text-center" >Registro - Empresa</h4>
+        </div>
+
+    <div id="mod_reg" class="modal-body" >
+<!-- Body Content-->
+     <form class="form-horizontal">
+
+      <div class="form-group">
+          <label>Nombre de la empresa:</label>
+          <input type="text" class="form-control" name="fname" placeholder="Nombre Empresa, C.A." required>
+      </div>
+
+      <div class="form-group">
+        <label >RIF:</label>
+          <input type="text" class="form-control" name="lname" placeholder="J-12345678" required>
+        
+      </div>
+
+      <div class="form-group">
+        <label >Correo:</label>
+          <input type="email" class="form-control" name="mail" placeholder="name@example.com" required>
+        
+      </div>
+
+      <div class="form-group">
+        <label>Contraseña:</label>
+          <input type="password" class="form-control" name="pass" required>
+        
+      </div>
+
+      <div class="form-group">
+        <label >Confirmar Contraseña:</label>
+          <input type="password" class="form-control" name="pass_c" required>
+        
+      </div>
+    </form>
+<!-- Ends Body Content-->
+    </div>
+
+        <div class="modal-footer">
+          <center>
+          <button type="submit" class="btn btn-success btn-block" data-dismiss="modal">Registrarse</button>
+          </center>
+        </div>
+      </div>
+      
+    </div>
+  </div><!-- Ends Modal Reg Emp-->
+
+
+
+
+
+
+</body>
+</html>
