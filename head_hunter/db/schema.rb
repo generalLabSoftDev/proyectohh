@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161104022347) do
+ActiveRecord::Schema.define(version: 20161125030840) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,10 +22,18 @@ ActiveRecord::Schema.define(version: 20161104022347) do
     t.string   "sede"
     t.string   "idioma"
     t.integer  "anosexp"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.date     "time"
     t.string   "educacion"
+    t.boolean  "discapacidad"
+    t.text     "discapacidad_desc"
+    t.boolean  "viaje"
+    t.text     "etiqueta"
+    t.string   "estado"
+    t.string   "municipio"
+    t.string   "sector"
+    t.string   "idiomalvl"
   end
 
   create_table "competencies", force: :cascade do |t|
@@ -35,6 +43,8 @@ ActiveRecord::Schema.define(version: 20161104022347) do
     t.integer  "charge_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "tipo"
+    t.string   "etiqueta"
     t.index ["charge_id"], name: "index_competencies_on_charge_id", using: :btree
   end
 

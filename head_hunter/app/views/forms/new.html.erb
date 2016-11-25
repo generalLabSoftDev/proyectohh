@@ -1,5 +1,5 @@
 
-<h2>Nueva Peticion</h2>
+<h2>Nueva Petición</h2>
 
 <%= form_for @form do |f| %>
 
@@ -20,7 +20,7 @@
 
   <div class="panel panel-primary">
 
-  <div class="panel-heading" align="center">Peticion</div>
+  <div class="panel-heading" align="center">Petición</div>
 
   <div class="panel-body">
 
@@ -29,6 +29,10 @@
      <div class="form-horizontal">
 
           <div class="form-group" align="center" >
+
+          <p> A continuación haga una descripción del cargo que desea buscar, incluya el nombre del cargo, su nombre como empresa, el área en el que se desarrolla el cargo, la sede donde se impartirá, el idioma requerido, la experiencia con dicho idioma, si acepta personas con discapacidad, si requeriere que el aspirante tenga afinidad para viajar, el estado, municipio y sector donde se requiere el cargo.
+
+          A demás describa cualquier cualidad o competencia que requiera dicho cargo, tanto técnica como no técnica. 
             <label class="control-label col-md-12" > </label>
             <div class="col-md-12"> <%= f.text_area :descripcion %> </div>
 
@@ -51,6 +55,4 @@
 
   <% end %>
 
-
-<%= link_to '<button class="btn btn-primary" > Atras </button>'.html_safe, forms_path %>
 <br>

@@ -1,13 +1,13 @@
 <h2>Lista de Peticiones</h2>
  
- <%= link_to '<button class="btn btn-primary" > Nueva Peticion </button>'.html_safe, new_form_path %>
+ <%= link_to '<button class="btn btn-primary" > Nueva Petición </button>'.html_safe, new_form_path %>
 <br>
 <br>
 
-<table  class="table table-bordered" >
+<table  class="table table-bordered"  style="background-color: white;">
 <thead>
   <tr>
-    <th>Descripcion</th>
+    <th>Descripción</th>
     <th>Ver</th>
     <th>Editar</th>
     <th>Eliminar</th>
@@ -22,7 +22,7 @@
       <td><%= link_to '<span class="glyphicon glyphicon glyphicon-pencil" ></span>'.html_safe, edit_form_path(form) %></td>
       <td><%= link_to '<span class="glyphicon glyphicon glyphicon-trash" ></span>'.html_safe, form_path(form),
               method: :delete,
-              data: { confirm: 'Estas seguro?' } %></td>
+              data: { confirm: 'Desea continuar?' } %></td>
     </tr>
   <% end %>
 </tbody>

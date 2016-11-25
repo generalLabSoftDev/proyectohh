@@ -5,37 +5,10 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
-/* Begins Extra Styles */
-
-
-.glyphicon:hover {
-  color:#55ACEE;
-}
-
-.glyphicon:focus {
- color:#55ACEE;
-}
+/* Begins Sticky footer */
 
 
 
-.table-bordered > thead {
-  background-color: #55ACEE;
-  color: #fff;
-}
-
-.container > h2 {
-  color:#55ACEE;;
-}
-
-.boxe1 
-{
-  padding-bottom: 100px;
-
-}
-
-
-
-/*     ///////////////////////////////////////// */
 
 html {
   font-family: sans-serif;
@@ -44,8 +17,6 @@ html {
 }
 body {
   margin: 0;
-  /*background: url(/images/fondo6.jpg) ; */
-  background-size: cover;
 }
 article,
 aside,
@@ -245,11 +216,18 @@ th {
 
 .nav-tabs > li.pill > a{
 background-color:  #cccccc;
-border-top-width: 1px;
-border-right-width: 3px;
-border-top-color: black;
-border-right-color: black;
+//border-top-width: 1px;
+//border-right-width: 3px;
+//border-top-color: black;
+//border-right-color: black;
+border-color: black;
 }
+
+.nav-tabs > li.pill > a:hover{
+background-color:  #8c8c8c;
+
+}
+
 
 #mod_reg{
   padding-left: 80px;
@@ -295,7 +273,49 @@ span.forg a:hover{
 
 }
 
-#prof form .form-group div{
+.camp_t{
+  padding-top: 15px;
+  padding-left: 750px;
+  padding-right: 100px;
+
+}
+
+.camp_t > div > input{
+  
+   border: #006bb3 3px solid;
+   background-color: #d9d9d9;
+   color: black;
+  text-align: center;
+}
+
+.campo_f{
+  padding-right: 100px;
+  padding-left: 20px;
+}
+
+#subt{
+padding-top: 20px;
+padding-bottom: 10px;
+
+}
+
+
+#check_p{
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 450px;
+  padding-right: 100px;
+}
+
+
+#check_psi{
+  padding-top: 30px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 100px;
+}
+
+#prof form .form-group div, #acad form .form-group div {
   
   padding-left: 30px;
   padding-right: 30px;
@@ -308,13 +328,122 @@ span.forg a:hover{
 
 }
 
+#tabla{
+  padding-top: 25px;
+  padding-left: 150px;
+  padding-right: 150px;
+
+}
+
+#tabla > table > thead > tr > th, #tabla > table > thead  {
+
+  border: black 3px solid;
+}
+
+
+#tabla > table {
+
+  border: #006bb3 4px solid;
+}
+
+
+
+#tabla > table > tbody > tr, #tabla > table > tbody > tr > td{
+
+ border: #006bb3 2px solid;
+
+}
+
+#contacto{
+  
+  background-color: #fff;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  
+}
+
+#nosotros{
+ margin-top:-30px;
+ background-color: #fff;
+ margin-bottom: 30px; 
+}
+
+
+#precios{
+
+  background-color: #fff;
+  margin-top: 30px;
+  padding-bottom: 10px;
+  border-radius:6px 6px 6px 6px;
+  box-shadow: 5px 5px 10px #3D3E3F;
+
+}
+
 #p-prof{
+  border-color: #0099cc;
+  border-width: 2px;
+  margin-left: 50px;
+  margin-right: 200px;
+}
+
+#psi_t{
   border-color: #0099cc;
   border-width: 2px;
   margin-left: 50px;
   margin-right: 50px;
 }
 
+.pan_p .col-sm-4 .panel .panel-heading{
+
+  color: #fff;
+  background-color: #006bb3; 
+
+}
+
+.pan_p .col-sm-4 .panel{
+  
+border: 1px solid #006bb3;
+
+}
+
+#car_imag #myCarousel .carousel-inner > .item > img,
+ #car_imag #myCarousel .carousel-inner > .item > a > img {
+      width: 100%;
+      height: 550px;
+      margin: auto;
+
+}
+
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #006bb3 !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+
+div.h_regi{
+  margin-right: 15px;
+  margin-left: -40px;
+  border-radius:6px 6px 6px 6px;
+  box-shadow: 5px 5px 10px #3D3E3F;
+  background-color: white;
+  padding-bottom: 10px;
+ } 
+
+
+ div.h_regd{
+  margin-right: -50px;
+  margin-left: 40px;
+  border-radius:6px 6px 6px 6px;
+  box-shadow: 5px 5px 10px #3D3E3F;
+  background-color: white;
+  padding-bottom: 10px;
+ } 
 
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -349,7 +478,6 @@ span.forg a:hover{
   }
   thead {
     display: table-header-group;
-
   }
   tr,
   img {
@@ -387,14 +515,15 @@ span.forg a:hover{
   }
   .table-bordered th,
   .table-bordered td {
+
     border: 1px solid #ddd !important;
   }
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
 
-  src: url('/assets/glyphicons-halflings-regular.eot');
-  src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff2') format('woff2'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('./glyphicons-halflings-regular.eot');
+  src: url('./glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('./glyphicons-halflings-regular.woff2') format('woff2'), url('./glyphicons-halflings-regular.woff') format('woff'), url('./glyphicons-halflings-regular.ttf') format('truetype'), url('./glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -1216,7 +1345,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  background-color: #006bb3;
 }
 input,
 button,
@@ -1232,7 +1361,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #fff;
+  color: #006bb3;
   text-decoration: underline;
 }
 a:focus {
@@ -1464,7 +1593,7 @@ mark,
   text-transform: capitalize;
 }
 .text-muted {
-  color: #FFF;
+  color: #777;
 }
 .text-primary {
   color: #337ab7;
@@ -1712,7 +1841,7 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: 15px;
+  padding-right:15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
@@ -3698,7 +3827,7 @@ tbody.collapse.in {
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  color: #fff;
+  color: #006bb3;
   text-decoration: none;
   background-color: #337ab7;
   outline: 0;
@@ -4624,10 +4753,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #55ACEE;
+  background-color: #fff;
+  border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
-  color: #FFF;
+  color: #777;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -4638,7 +4768,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #777;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #FFF;
+  color: #777;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -5087,8 +5217,6 @@ a.badge:focus {
 }
 .jumbotron {
   padding-top: 30px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
   color: inherit;
   background-color: #fff;
 }
