@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Editar Perfil</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="include/css/bootstrap.css">
+  <link rel="stylesheet" href="include/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="include/js/jquery.js"></script>
+  <script src="include/js/bootstrap.min.js"></script>
+</head>
+<body style="margin-bottom:60px; " >
+
+<!-- MENU -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="">Headhunters</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mi Perfil</a>
+              <ul class="dropdown-menu">
+                <li><a href="Editar_Perfil.html"> Editar Perfil</a></li>
+                <li><a href="Home.html"> Cerrar Sesión</a></li>
+              </ul>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Ends MENU -->
+<!-- FOOTER -->
+<nav class="navbar navbar-default navbar-fixed-bottom" >
+  <div class="container">
+    <p class="text-muted" align="middle"> Creado por los estudiantes del Laboratorio General del Desarrollo de Software. 2016</p>
+    </div>
+</nav>
+<!-- Ends FOOTER -->
+
+
+
+
+  <div class="container menu-edit">
+
+
+
+            <ul class="nav nav-tabs nav-justified lista">
+                <li class="active pill"><a data-toggle="tab" href="#pers">Datos Personales</a></li>
+                <li class="pill"><a data-toggle="tab" href="#acad">Datos Académicos</a></li>
+                <li class="pill"><a data-toggle="tab" href="#prof">Experiencia Laboral</a></li>
+                <li class="pill"><a data-toggle="tab" href="#comp">Competencias</a></li>
+           </ul>
+
+  <div class="panel panel-default">
+  <div class="panel-body">
+
+    <div class="tab-content">
+
+        <!--Tab de Datos Personales-->
+        <div id="pers" class="row tab-pane fade in active">
+
+            <h2 align="center"> Datos Personales </h2>
+
+            <form class="form-horizotal">
+
+              <div class="form-group">
+                  <div class="col-md-6 campo">
+                    <label>Nombres:</label>
+                    <input type="text" class=" form-control" name="fname" placeholder="Juan Andres" required>
+                    </div>
+                  <div class="col-md-6 campo">
+                    <label >Apellidos:</label>
+                    <input type="text" class=" form-control" name="lname" placeholder="Perez Rodríguez" required>
+                   </div>
+                </div>
+
+                  <div class="form-group">
+                    <div class="col-md-6 campo">
+                      <label >Fecha de Nacimiento:</label>
+                      <input type="date" class="form-control" name="bdate" required>
+                    </div>
+                    <div class="col-md-6 campo">
+                    <label >Correo:</label>
+                      <input type="email" class="form-control" name="mail" placeholder="name@example.com" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-md-6 campo">
+                      <label >Cédula de Identidad:</label>
+                      <input type="text" class="form-control" name="cedula" required>
+                    </div>
+                    <div class="col-md-6 campo">
+                    <label >Número telefónico (local):</label>
+                      <input type="texto" class="form-control" name="telf_l" placeholder="0212-1234567" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-md-4 campo">
+                    <label for="list_e" >Estado de Residencia:</label>
+                      <select id="list_e" class="form-control" required>
+                        <option value="Amazonas">Amazonas</option>
+                        <option value="Anzategui">Anzoategui</option>
+                        <option value="Apure">Apure</option>
+                        <option value="Aragua">Aragua</option>
+                        <option value="Barinas">Barinas</option>
+                        <option value="Bolívar">Bolívar</option>
+                        <option value="Carabobo">Carabobo</option>
+                        <option value="Cojedes">Cojedes</option>
+                        <option value="Delta Amacuro">Delta Amacuro</option>
+                        <option value="Distrito Capital">Distrito Capital</option>
+                        <option value="Falcón">Falcón</option>
+                        <option value="Guárico">Guárico</option>
+                        <option value="Lara">Lara</option>
+                        <option value="Mérida">Mérida</option>
+                        <option value="Miranda">Miranda</option>
+                        <option value="Monagas">Monagas</option>
+                        <option value="Nueva Esparta">Nueva Esparta</option>
+                        <option value="Portuguesa">Portuguesa</option>
+                        <option value="Sucre">Sucre</option>
+                        <option value="Táchira">Táchira</option>
+                        <option value="Trujillo">Trujillo</option>
+                        <option value="Vargas">Vargas</option>
+                        <option value="Yaracuy">Yaracuy</option>
+                        <option value="Zulia">Zulia</option>
+                      </select>
+
+                    </div>
+
+                    <div class="col-md-4 campo">
+                      <label for="list_m" >Municipio:</label>
+                      <select id="list_m" class="form-control" required>
+
+                      </select>
+                    </div>
+
+                    <div class="col-md-4 campo">
+                    <label >Número Telefónico (móvil):</label>
+                      <input type="text" class="form-control" name="lname" placeholder="0424-1264567" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-md-6 campo">
+                       <label>¿Posee algún tipo de discapacidad?</label><br>
+                       <input type="radio" name="disc" value="si"> Si
+                       <input type="radio" name="disc" value="no"> No
+                    </div>
+                    <div class="col-md-6 campo">
+                    <label >Intereses personales:</label>
+                      <input type="text" class="form-control" name="pass_c" required>
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <div class="col-md-6 campo">
+                       <label>Contraseña:</label>
+                       <input type="password" class="form-control" name="pass" required>
+                    </div>
+                    <div class="col-md-6 campo">
+                    <label >Confirmar Contraseña:</label>
+                      <input type="password" class="form-control" name="pass_c" required>
+                    </div>
+                  </div>
+
+
+
+
+
+                  <div class="form-group">
+                      <div class="col-md-12" align="center" style="padding-top: 30px;">
+                         <button type="submit" class="btn btn-primary" style="width: 150px;" >Guardar</button>
+                      </div>
+                  </div>
+
+          </form>
+
+
+
+            </div> <!-- Fin Datos Personales-->
+
+
+
+
+            <!--Tab de Datos Académicos-->
+
+            <div id="acad" class="row tab-pane fade">
+
+                    <h2 align="center"> Datos Académicos </h2>
+
+                    <form class="form-hotizontal">
+
+                          <div class="form-group">
+                              <div class="col-md-4 campo">
+                                  <label for="list_e">Bachillerato:</label>
+                                  <select id="list_e" class="form-control" required>
+                                      <option value="nofinalizado">No Finalizado</option>
+                                      <option value="finalizado">Finalizado</option>
+
+                                  </select>
+                              </div>
+
+                              <div class="col-md-4 campo">
+                                  <label for="list_e">Mención:</label>
+                                  <select id="list_e" class="form-control" required>
+                                      <option value="nofinalizado">Ciencias</option>
+                                      <option value="finalizado">Humanidades</option>
+
+                                  </select>
+
+                              </div>
+
+
+                              <div class="col-md-4 campo">
+                                  <label >Institución:</label>
+                                  <input type="text" name="institución" class="form-control">
+
+                              </div>
+
+                          </div>
+
+                            <div class="form-group">
+                              <div class="col-md-6 campo">
+                                  <label for="list_e">Estudios Universitarios:</label>
+                                  <select id="list_e" class="form-control" required>
+                                      <option value="nofinalizado">No Finalizado</option>
+                                      <option value="finalizado">Finalizado</option>
+
+                                  </select>
+                              </div>
+
+                              <div class="col-md-6 campo">
+                                  <label >Institución:</label>
+                                  <input type="text" name="institución" class="form-control">
+
+                              </div>
+
+                          </div>
+
+                          <div class="form-group">
+                              <div class="col-md-6 campo">
+                                  <label ">Otros Estudios:</label>
+                                  <input type="text" name="institución" class="form-control">
+                              </div>
+
+                              <div class="col-md-6 campo">
+                                  <label >Institución:</label>
+                                  <input type="text" name="institución" class="form-control">
+
+                              </div>
+
+                          </div>
+
+                    <div class="form-group">
+                      <div class="col-md-12" align="left" style="padding-top: 30px;">
+                         <button type="submit" class="btn btn-primary" style="width: 150px;" ><i class="fa fa-plus fa-lg"></i>  Agregar Mas</button>
+                      </div>
+                    </div>
+
+
+                    </form>
+
+
+
+
+                    <div class="form-group">
+                      <div class="col-md-12" align="center" style="padding-top: 30px;">
+                         <button type="submit" class="btn btn-primary" style="width: 150px;" >Guardar</button>
+                      </div>
+                    </div>
+            </div><!-- Fin Datos Académicos-->
+
+
+
+
+
+              <!--Tab de Datos Profesionales-->
+
+
+            <div id="prof" class=" row tab-pane fade">
+
+                    <h2 align="center"> Experiencia Laboral </h2>
+
+                    <form  class="form-horizontal">
+
+                          <div class="form-group">
+
+                              <div class="col-md-6">
+                                  <label >Profesión u Oficio:</label>
+                                  <input type="text" name="profesion" class="form-control">
+                              </div>
+
+
+
+                          </div>
+
+
+                  <div id="p-prof" class="panel">
+                      <div class="panel-body">
+                          <div class="form-group">
+                              <div class="col-md-6">
+                                  <label >Empresa:</label>
+                                  <input type="text" name="profesion" class="form-control">
+
+                              </div>
+
+                              <div class="col-md-6">
+                                  <label >Tiempo en la empresa:</label>
+                                  <input type="text" name="profesion" class="form-control">
+
+                              </div>
+
+
+                          </div>
+
+
+                          <div class="form-group">
+
+                              <div class="col-md-6">
+                                  <label >Cargo:</label>
+                                  <input type="text" name="profesion" class="form-control">
+
+                              </div>
+                          </div>
+
+
+
+                        </div><!--end pbody-->
+                  </div><!-- end panel-->
+
+                      <div class="form-group">
+                      <div class="col-md-12" align="left" style="padding-top: 30px;">
+                         <button type="submit" class="btn btn-primary" style="width: 150px;" ><i class="fa fa-plus fa-lg"></i>  Agregar Mas</button>
+                      </div>
+                    </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-12" align="center" style="padding-top: 30px;">
+                               <button type="submit" class="btn btn-primary" style="width: 150px;" >Guardar</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+
+
+
+
+            </div><!-- Fin Datos Profesionales-->
+
+
+
+
+              <!--Tab de Competencias-->
+
+  <div id="comp" class="row tab-pane fade">
+
+            <h2 align="center"> Competencias </h2>
+
+            <div class="col-md-6">
+              <h3 align="center"> Competencias Agregadas </h3>
+              <br>
+              <ul id="list" class="list-group">
+                <li href="#" class="list-group-item"> Competencia 1<span style="cursor: pointer;" class="badge" onclick="eliminar(this);"> Eliminar</span> <span style="cursor: pointer;" class="badge" data-toggle="modal" data-target="#myModal2" data-keyboard="true"> Editar</span></li>
+                <li href="#" class="list-group-item"> Competencia 2<span style="cursor: pointer;" class="badge" onclick="eliminar(this);"> Eliminar</span> <span style="cursor: pointer;" class="badge" data-toggle="modal" data-target="#myModal2" data-keyboard="true"> Editar</span></li>
+                <li href="#" class="list-group-item"> Competencia 3<span style="cursor: pointer;" class="badge" onclick="eliminar(this);"> Eliminar</span> <span style="cursor: pointer;" class="badge" data-toggle="modal" data-target="#myModal2" data-keyboard="true"> Editar</span></li>
+              </ul>
+
+          </div>
+      <div class="col-md-6">
+          <p> Busca y agrega nuevas competencias a la lista de competencias requeridas a la izquierda, usa la barra de busqueda de abajo.</p>
+         <form class="form-horizontal">
+          <div class="form-group">
+          <div class="col-md-4">
+            <input type="text" class="form-control" id="Nombre_Comp" placeholder="Nombre">
+          </div>
+          <button type="submit" class="btn btn-primary" >Buscar</button>
+          </div>
+          </form>
+        <ul id="search" class="list-group">
+          <li href="#" class="list-group-item"> Competencia 4<span style="cursor: pointer;" class="badge" onclick="agregar(this);"> Agregar</span> <span style="cursor: pointer;" class="badge" data-toggle="modal" data-target="#myModal2" data-keyboard="true"> Editar</span></li>
+          <li  class="list-group-item"> Competencia 5<span style="cursor: pointer;" class="badge" onclick="agregar(this);"> Agregar</span> <span style="cursor: pointer;" class="badge" data-toggle="modal" data-target="#myModal2" data-keyboard="true"> Editar</span></li>
+          <li class="list-group-item"> Competencia 6<span style="cursor: pointer;" class="badge" onclick="agregar(this);"> Agregar</span> <span style="cursor: pointer;" class="badge" data-toggle="modal" data-target="#myModal2" data-keyboard="true"> Editar</span></li>
+        </ul>
+
+      </div>
+
+                <div class="form-group">
+                      <div class="col-md-12" align="center" style="padding-top: 30px;">
+                         <button type="submit" class="btn btn-primary" style="width: 150px;" >Guardar</button>
+                      </div>
+                  </div>
+
+    </div><!-- Fin Competencias-->
+
+
+          </div><!-- Fin Tab-Content-->
+
+  </div><!-- Fin Panel-Body-->
+  </div><!-- Fin Panel-->
+
+
+
+    <!-- Modals -->
+
+<!-- Create Competencia -->
+  <div class="modal fade" id="myModal" role="dialog" >
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center">Nueva Competencia</h4>
+        </div>
+        <div class="modal-body">
+
+<!-- Body Content-->
+     <form class="form-horizontal">
+      <div class="form-group" style="padding-top: 15px;">
+        <label class="control-label col-md-4" for="Nombre_Comp">Descripción de Competencia:</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" id="Nombre_Comp" placeholder="Describir Competencia">
+        </div>
+      </div>
+    </form>
+
+<!-- Ends Body Content-->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Crear</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Edit Competencia -->
+    <div class="modal fade" id="myModal2" role="dialog" >
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center"> Editar Competencia</h4>
+        </div>
+        <div class="modal-body">
+
+<!-- Body Content-->
+     <form class="form-horizontal">
+      <div class="form-group" style="padding-top: 15px;">
+        <label class="control-label col-md-4" for="Nombre_Comp">Descripción de Competencia:</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" id="Nombre_Comp" placeholder="Describir Competencia">
+        </div>
+      </div>
+    </form>
+
+
+<!-- Ends Body Content-->
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Guardar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+<script>
+
+function eliminar (e){
+e.setAttribute("onclick", "agregar(this);");
+e.innerHTML="Agregar";
+var aux = e.closest("li");
+$("#search").append(aux);
+}
+function agregar (e){
+e.setAttribute("onclick", "eliminar(this);");
+e.innerHTML="Eliminar";
+var aux = e.closest("li");
+$("#list").append(aux);
+}
+
+</script>
+
+</body>
+</html>
+

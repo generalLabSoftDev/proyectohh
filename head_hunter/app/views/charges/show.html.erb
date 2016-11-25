@@ -7,62 +7,117 @@
 
 <br>
 <br>            
-  <table class="table table-bordered">
-    <thead>
+
+
+<h2>Datos generales de <%= @charge.nombre %> </h2>
+
+  <table class="table table-bordered" style="background-color: white;">
+    <tbody>
       <tr>
         <th>Nombre</th>
-        <th>Cliente</th>
-        <th>Area</th>
-        <th>Sede</th>
-        <th>Idioma</th>
-        <th>Tiempo</th>
-        <th>Experiencia</th>
-        <th>Educacion</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
         <td><%= @charge.nombre %></td>
+      </tr>
+      <tr>
+        <th>Cliente</th>
         <td><%= @charge.cliente %></td>
+      </tr>
+      <tr>
+        <th>Área</th>
         <td><%= @charge.area %> </td>
+      </tr>
+      <tr>
+        <th>Sede</th>
         <td><%= @charge.sede %> </td>
+      </tr>
+      <tr>
+        <th>Idioma</th>
         <td><%= @charge.idioma %></td>
-        <td><%= @charge.time %></td>
+      </tr>
+      <tr>
+        <th>Nivel de Idioma</th>
+        <td><%= @charge.idiomalvl %></td>
+      </tr>
+      <tr>
+        <th>Experiencia</th>
         <td><%= @charge.anosexp %></td>
+      </tr>
+      <tr>
+        <th>Educación</th>
         <td><%= @charge.educacion %></td>
       </tr>
+      <tr>
+        <th>Discapacidad</th>
+        <td><%= @charge.discapacidad %></td>
+      </tr>
+      <tr>
+        <th>Puede Viajar</th>
+        <td><%= @charge.viaje %></td>
+      </tr>
+      <tr>
+        <th>Estado</th>
+        <td><%= @charge.estado %></td>
+      </tr>
+      <tr>
+        <th>Municipio</th>
+        <td><%= @charge.municipio %></td>
+      </tr>
+      <tr>
+        <th>Sector</th>
+        <td><%= @charge.sector %></td>
+      </tr>
+      <tr>
+        <th>Palabras Claves</th>
+        <td><%= @charge.etiqueta %></td>
+      </tr>
     </tbody>
   </table>
+  
+            <ul class="nav nav-tabs nav-justified lista">
+                <li class="active pill"><a data-toggle="tab" href="#gen">Competencias Agregadas</a></li>
+                <li class="pill"><a data-toggle="tab" href="#comp">Agregar Competencias</a></li>
+            </ul>
+      
+  <div class="panel panel-default">
+  <div class="panel-body">
+     
+    <div class="tab-content">
+        <!--Tab de Datos Personales-->    
+        <div id="gen" class="row tab-pane fade in active">
+
+                  <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Descripción</th>
+                      <th>Nivel</th>
+                      <th>Tipo</th>
+                      <th>Palabras claves</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% @charge.competencies.each do |competency| %>
+                    <tr>
+                      <td><%= competency.descripcion%></td>
+                      <td><%= competency.nivel %></td>
+                      <td><%= competency.tipo %></td>
+                      <td><%= competency.etiqueta %> </td>
+
+                       <td>  <%= link_to '<span class="glyphicon glyphicon glyphicon-trash" ></span>'.html_safe, [competency.charge, competency],
+                             method: :delete,
+                             data: { confirm: 'seguro?' } %> </td> 
+                       
+                    </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+          </div> <!-- Fin Datos -->
 
 
-<h2>Competencias de <%= @charge.nombre %> </h2>
+              <!--Tab de Competencias-->    
+  <div id="comp" class="row tab-pane fade ">
+          <%= render 'competencies/form' %>
+  </div>
+      </div><!-- Fin Tab-Content-->
 
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Descripcion</th>
-        <th>Nivel</th>
-        <th>tags</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @charge.competencies.each do |competency| %>
-      <tr>
-        <td><%= competency.descripcion%></td>
-        <td><%= competency.nivel %></td>
-        <td><%= competency.tag %> </td>
-
-         <td>  <%= link_to 'Eliminar', [competency.charge, competency],
-               method: :delete,
-               data: { confirm: 'seguro?' } %> </td> 
-         
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-
-
-<%= render 'competencies/form' %>
-
+  </div><!-- Fin Panel-Body-->
+  </div><!-- Fin Panel-->
 

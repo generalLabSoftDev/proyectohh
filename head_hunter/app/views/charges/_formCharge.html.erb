@@ -38,7 +38,7 @@
 
           <div class="form-group" align="center" >
 
-            <label class="control-label col-md-2" > <%= f.label :area %> </label>
+            <label class="control-label col-md-2" > <%= f.label :área %> </label>
             <div class="col-md-4"> <%= f.text_field :area %> </div>
 
             <label class="control-label col-md-2" > <%= f.label :sede %> </label>
@@ -51,18 +51,75 @@
             <label class="control-label col-md-2" > <%= f.label :idioma %> </label>
             <div class="col-md-4"> <%= select_tag 'charge[idioma]', '<option>Español</option><option>English</option><option>Français</option><option>Deutsch</option><option>Português</option><option>Русский</option><option>العربية</option><option>普通话</option><option>日本語 </option><option>हिन्दी</option><option>Otro</option>'.html_safe  %></div>
 
-             <label class="control-label col-md-2" > <%= f.label :tiempo %> </label>
-             <div class="col-md-4"><%= f.date_field :time %> </div>
+             <label class="control-label col-md-2" > <%= f.label :"Nivel de Educación" %> </label>
+            <div class="col-md-4"> <%= select_tag 'charge[educacion]', '<option>Ninguno</option><option>Bachiller</option><option>Técnico Superior</option><option>Universitario</option><option>Maestria</option><option>Doctorado</option>'.html_safe  %></div>
 
           </div>
 
           <div class="form-group" align="center" >
 
-            <label class="control-label col-md-2" > <%= f.label :"Anos de Experiencia" %> </label>
-            <div class="col-md-4"> <%= f.text_field :anosexp%> </div>
 
-             <label class="control-label col-md-2" > <%= f.label :"Nivel de Educacion" %> </label>
-            <div class="col-md-4"> <%= select_tag 'charge[educacion]', '<option>Bachiller</option><option>Tecnico Superior</option><option>Universitario</option><option>Maestria</option><option>Doctorado</option><option>Ninguno</option>'.html_safe  %></div>
+             <label class="control-label col-md-2" > <%= f.label :"Nivel del idioma" %> </label>
+             <div class="col-md-4"><%= select_tag 'charge[idiomalvl]', '<option>Ninguno</option><option>Bajo</option><option>Intermedio</option><option>Alto</option>'.html_safe  %> </div>
+
+
+            <label class="control-label col-md-2" > <%= f.label :"Discapacidad" %> </label>
+            <div class="col-md-4"> <%= select_tag 'charge[discapacidad]', '<option value="false">No</option><option value="true">Si</option>'.html_safe%> </div>
+
+
+
+          </div>
+
+          <div class="form-group" align="center" >
+
+            <label class="control-label col-md-2" > <%= f.label :"Afinidad para Viajar" %> </label>
+            <div class="col-md-4"> <%= select_tag 'charge[viaje]', '<option value="false">No</option><option value="true">Si</option>'.html_safe%> </div>
+
+
+          </div>
+
+          <div class="form-group" align="center" >
+
+            <label class="control-label col-md-2" > <%= f.label :"Estado" %> </label>
+            <div class="col-md-4"> <%= select_tag 'charge[estado]', '
+                        <option>Amazonas</option>
+                        <option>Anzoategui</option>
+                        <option >Apure</option>
+                        <option >Aragua</option>
+                        <option >Barinas</option>
+                        <option >Bolívar</option>
+                        <option >Carabobo</option>
+                        <option >Cojedes</option>
+                        <option >Delta Amacuro</option>
+                        <option >Distrito Capital</option>
+                        <option >Falcón</option>
+                        <option >Guárico</option>
+                        <option >Lara</option>
+                        <option >Mérida</option>
+                        <option >Miranda</option>
+                        <option >Monagas</option>
+                        <option >Nueva Esparta</option>
+                        <option >Portuguesa</option>
+                        <option >Sucre</option>
+                        <option >Táchira</option>
+                        <option >Trujillo</option>
+                        <option >Vargas</option>
+                        <option >Yaracuy</option>
+                        <option >Zulia</option>
+            '.html_safe %> </div>
+
+             <label class="control-label col-md-2" > <%= f.label :municipio %> </label>
+            <div class="col-md-4"> <%= f.text_field :municipio %></div>
+
+          </div>
+
+          <div class="form-group" align="center" >
+
+            <label class="control-label col-md-2" > <%= f.label :sector %> </label>
+            <div class="col-md-4"> <%= f.text_field :sector%> </div>
+
+             <label class="control-label col-md-2" > <%= f.label :"Palabras Claves" %> </label>
+            <div class="col-md-4" title="Separa las palabras mediante comas"> <%= f.text_field :etiqueta %></div>
 
           </div>
 

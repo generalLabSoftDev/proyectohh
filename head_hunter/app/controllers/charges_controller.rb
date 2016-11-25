@@ -45,7 +45,7 @@ class ChargesController < ApplicationController
 
 	private
 	def charge_params
-	    params.require(:charge).permit(:nombre, :cliente, :area, :sede, :idioma, :time, :anosexp)
+	    params.require(:charge).permit(:nombre, :cliente, :area, :sede, :idioma, :idiomalvl, :discapacidad, :viaje, :educacion, :estado, :municipio, :sector, :etiqueta)
 	end
 
 end

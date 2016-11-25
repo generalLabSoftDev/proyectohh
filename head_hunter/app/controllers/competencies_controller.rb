@@ -15,6 +15,6 @@ class CompetenciesController < ApplicationController
  
   private
     def competency_params
-      params.require(:competency).permit(:descripcion, :nivel, :tag)
+      params.require(:competency).permit(:descripcion, :nivel, :tipo, :etiqueta)
     end
 end
