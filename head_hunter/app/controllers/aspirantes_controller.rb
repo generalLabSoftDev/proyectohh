@@ -1,20 +1,15 @@
-class HomeController < ApplicationController
+class AspirantesController < ApplicationController
   before_action :set_aspirante, only: [:show, :edit, :update, :destroy]
 
   # GET /aspirantes
   # GET /aspirantes.json
   def index
     @aspirantes = Aspirante.all
-    @aspirante = Aspirante.new
-    @empresas = Empresa.all
-    @empresa=Empresa.new
-
   end
 
   # GET /aspirantes/1
   # GET /aspirantes/1.json
   def show
-
   end
 
   # GET /aspirantes/new
@@ -30,16 +25,9 @@ class HomeController < ApplicationController
   # POST /aspirantes.json
   def create
     @aspirante = Aspirante.new(aspirante_params)
+    @aspirante.save
+    redirect_to root_url, notice:'Se agrego el usuario con éxito'
 
-    respond_to do |format|
-      if @aspirante.save
-        format.html { redirect_to @aspirante, notice: 'Aspirante was successfully created.' }
-        format.json { render :show, status: :created, location: @aspirante }
-      else
-        format.html { render :new }
-        format.json { render json: @aspirante.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PATCH/PUT /aspirantes/1

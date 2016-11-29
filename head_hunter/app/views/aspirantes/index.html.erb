@@ -1,0 +1,64 @@
+ <p id="notice"><%= notice %></p>
+
+<h1>Aspirantes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombres</th>
+      <th>Apellidos</th>
+      <th>Cedula</th>
+      <th>Sexo</th>
+      <th>Fecha</th>
+      <th>Correo</th>
+      <th>Contraseña</th>
+      <th>Telefono</th>
+      <th>Estado</th>
+      <th>Municipio</th>
+      <th>Celular</th>
+      <th>Discapacidad</th>
+      <th>Intereses</th>
+      <th>Bachillerato</th>
+      <th>Mencion</th>
+      <th>Institucion</th>
+      <th>Estudios universitarios</th>
+      <th>Institucion otros estudios</th>
+      <th>Area universidad</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aspirantes.each do |aspirante| %>
+      <tr>
+        <td><%= aspirante.nombres %></td>
+        <td><%= aspirante.apellidos %></td>
+        <td><%= aspirante.cedula %></td>
+        <td><%= aspirante.sexo %></td>
+        <td><%= aspirante.fecha %></td>
+        <td><%= aspirante.correo %></td>
+        <td><%= aspirante.contraseña %></td>
+        <td><%= aspirante.telefono %></td>
+        <td><%= aspirante.estado %></td>
+        <td><%= aspirante.municipio %></td>
+        <td><%= aspirante.celular %></td>
+        <td><%= aspirante.discapacidad %></td>
+        <td><%= aspirante.intereses %></td>
+        <td><%= aspirante.bachillerato %></td>
+        <td><%= aspirante.mencion %></td>
+        <td><%= aspirante.institucion %></td>
+        <td><%= aspirante.estudios_universitarios %></td>
+        <td><%= aspirante.institucion_otros_estudios %></td>
+        <td><%= aspirante.area_universidad %></td>
+        <td><%= link_to 'Show', aspirante %></td>
+        <td><%= link_to 'Edit', edit_aspirante_path(aspirante) %></td>
+        <td><%= link_to 'Destroy', aspirante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aspirante', new_aspirante_path %>
+

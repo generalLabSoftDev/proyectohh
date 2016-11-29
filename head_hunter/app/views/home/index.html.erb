@@ -1,53 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <title>HeadHunter</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="include/css/bootstrap.css">
-  <link rel="stylesheet" href="include/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-  <script src="include/js/jquery.js"></script>
-  <script src="include/js/bootstrap.min.js"></script>
-</head>
-<body style="margin-bottom:60px;" >
 
-<!-- MENU -->
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>cre
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="">Headhunters</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li data-toggle="modal" data-target="#myModalinit"><a href="#">Iniciar Sesión</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<!-- Ends MENU -->
-<!-- FOOTER 
-<nav class="navbar navbar-default navbar-fixed-bottom" >
-  <div class="container">
-    <p class="text-muted" align="middle"> Creado por los estudiantes del Laboratorio General del Desarrollo de Software. 2016</p>
-    </div>
-</nav>
-<!-- Ends FOOTER -->
 
+<br>
+<br>
  <div class="jumbotron text-center">
 	<img id="ban" src="/images/logo.png" class="img-responsive" >
-  
-  </div>  
+  </div>
 
 
 
-<div class="container">
- 
+<div id="registro" class="container">
+
     <div class="row">
 
         <div class="col-md-6 h_regi">
@@ -68,8 +30,127 @@
 
 
     </div>
-      
+
 </div>
+
+
+
+
+<div id="precios" class="container">
+  <div class="text-center">
+    <h2>Precios</h2>
+    <h4>Si eres una empresa, te ofrecemos los siguientes planes</h4>
+  </div>
+  <div class="row slideanim pan_p">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading ">
+          <h1>Basic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20</strong> Lorem</p>
+          <p><strong>15</strong> Ipsum</p>
+          <p><strong>5</strong> Dolor</p>
+          <p><strong>2</strong> Sit</p>
+
+        </div>
+        <div class="panel-footer">
+          <h3>$19</h3>
+          <h4>Mensual</h4>
+          <button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#myModalregemp">Registrase</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading ">
+          <h1>Pro</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>50</strong> Lorem</p>
+          <p><strong>25</strong> Ipsum</p>
+          <p><strong>10</strong> Dolor</p>
+          <p><strong>5</strong> Sit</p>
+
+        </div>
+        <div class="panel-footer">
+          <h3>$29</h3>
+          <h4>Mensual</h4>
+          <button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#myModalregemp">Registrarse</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading ">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>100</strong> Lorem</p>
+          <p><strong>50</strong> Ipsum</p>
+          <p><strong>25</strong> Dolor</p>
+          <p><strong>10</strong> Sit</p>
+
+        </div>
+        <div class="panel-footer">
+          <h3>$49</h3>
+          <h4>Mensual</h4>
+          <button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#myModalregemp">Registrarse</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  <!--    fin precios    -->
+
+
+
+
+  <div id="contacto" class="container-fluid">
+        <h2 class="text-center">CONTACTO</h2>
+        <div class="row slideanim">
+          <div class="col-md-5">
+            <p>Contáctanos si necesitas saber más sobre nuestros planes</p>
+            <p><i class="fa fa-map-marker"></i> Caracas, Vzla</p>
+            <p><i class="fa fa-phone"></i> +58 0212123456</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> correo@gmail.com</p>
+          </div>
+          <div class="col-md-7">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input class="form-control" id="name" name="name_c" placeholder="Nombre" type="text" required>
+              </div>
+              <div class="col-md-6 form-group">
+                <input class="form-control" id="email" name="email_c" placeholder="Correo" type="email" required>
+              </div>
+            </div>
+            <textarea class="form-control" id="comments" name="comment_C" placeholder="Comentario" rows="5"></textarea><br>
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <button class="btn btn-success pull-right" type="submit">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>   <!--    fin contacto    -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   <!--Modals-->
@@ -77,7 +158,7 @@
     <!-- Iniciar Sesión -->
   <div class="modal fade" id="myModalinit" role="dialog" >
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
 
@@ -98,7 +179,7 @@
 
       <div class="form-group">
           <label for="pass_ini"><i class="fa fa-eye"></i> Contraseña:</label>
-          <input type="password" class="form-control" id="pass_ini" required>  
+          <input type="password" class="form-control" id="pass_ini" required>
       </div>
 
       <div class="form-group">
@@ -114,7 +195,7 @@
 
         </div>
       </div>
-      
+
     </div>
   </div><!-- Ends Modal Inicio S-->
 
@@ -124,7 +205,7 @@
 
   <div class="modal fade" id="myModalreg" role="dialog" >
     <div class="modal-dialog ">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
 
@@ -136,70 +217,86 @@
 
     <div id="mod_reg" class="modal-body" >
 <!-- Body Content-->
-     <form class="form-horizontal">
 
-      <div class="form-group">
-          <label>Nombres:</label>
-          <input type="text" class="form-control" name="fname" placeholder="Juan Andres" required>
-      </div>
 
-      <div class="form-group">
-        <label >Apellidos:</label>
-          <input type="text" class="form-control" name="lname" placeholder="Perez Rodríguez" required>
-        
-      </div>
 
-      <div class="form-group">
-        <label >Cédula de Identidad:</label>
-          <input type="text" class="form-control" name="lname" placeholder="12.345.678" required>
-        
-      </div>
+    <%= form_for(@aspirante) do |f| %>
+  <% if @aspirante.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(aspirante.errors.count, "error") %> prohibited this aspirante from being saved:</h2>
 
-      <div class="form-group">
-        <label for="lists" >Sexo:</label>
-          <select id="lists" class="form-control">
-            <option value="Maculino">Masculino</option>
-            <option value="Femenino">Femenino</option>
-          </select>
-        
-      </div>
+      <ul>
+      <% @aspirante.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-      <div class="form-group">
-        <label >Fecha de Nacimiento:</label>
-          <input type="date" class="form-control" name="bdate" required>
-        
-      </div>
 
-      <div class="form-group">
-        <label >Correo:</label>
-          <input type="email" class="form-control" name="mail" placeholder="name@example.com" required>
-        
-      </div>
+  <div class="form-group">
+    <%= f.label :nombres %>
+    <%= f.text_field :nombres %>
+  </div>
 
-      <div class="form-group">
-        <label>Contraseña:</label>
-          <input type="password" class="form-control" name="pass" required>
-        
-      </div>
+  <div class="form-group">
+    <%= f.label :apellidos %>
+    <%= f.text_field :apellidos %>
+  </div>
 
-      <div class="form-group">
-        <label >Confirmar Contraseña:</label>
-          <input type="password" class="form-control" name="pass_c" required>
-        
-      </div>
-    </form>
-<!-- Ends Body Content-->
+  <div class="form-group">
+    <%= f.label :cedula %>
+    <%= f.number_field :cedula %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :sexo %>
+    <%= f.text_field :sexo %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :fecha %>
+    <%= f.text_field :fecha %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :correo %>
+    <%= f.text_field :correo %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :contraseña %>
+    <%= f.text_field :contraseña %>
+  </div>
+
+<div class="modal-footer">
+
+
+ <center>
+    <%= f.submit :class => "btn btn-success btn-block"%>
+</center>
+
+  </div>
+
+<% end %>
+
+
+
+
+    <!-- Ends Body Content-->
     </div>
 
-        <div class="modal-footer">
-          <center>
-          <button type="submit" class="btn btn-success btn-block" data-dismiss="modal">Registrarse</button>
-          </center>
-        </div>
-      </div>
-      
+
+
     </div>
   </div><!-- Ends Modal Reg Asp-->
+
+
+</div>
+
+
+
+
 
 
 
@@ -208,7 +305,7 @@
 
   <div class="modal fade" id="myModalregemp" role="dialog" >
     <div class="modal-dialog ">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
 
@@ -220,47 +317,48 @@
 
     <div id="mod_reg" class="modal-body" >
 <!-- Body Content-->
-     <form class="form-horizontal">
 
-      <div class="form-group">
-          <label>Nombre de la empresa:</label>
-          <input type="text" class="form-control" name="fname" placeholder="Nombre Empresa, C.A." required>
-      </div>
+     <%= form_for(@empresa) do |f| %>
+  <% if @empresa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@empresa.errors.count, "error") %> prohibited this empresa from being saved:</h2>
 
-      <div class="form-group">
-        <label >RIF:</label>
-          <input type="text" class="form-control" name="lname" placeholder="J-12345678" required>
-        
-      </div>
-
-      <div class="form-group">
-        <label >Correo:</label>
-          <input type="email" class="form-control" name="mail" placeholder="name@example.com" required>
-        
-      </div>
-
-      <div class="form-group">
-        <label>Contraseña:</label>
-          <input type="password" class="form-control" name="pass" required>
-        
-      </div>
-
-      <div class="form-group">
-        <label >Confirmar Contraseña:</label>
-          <input type="password" class="form-control" name="pass_c" required>
-        
-      </div>
-    </form>
-<!-- Ends Body Content-->
+      <ul>
+      <% @empresa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
     </div>
+  <% end %>
 
-        <div class="modal-footer">
-          <center>
-          <button type="submit" class="btn btn-success btn-block" data-dismiss="modal">Registrarse</button>
-          </center>
-        </div>
-      </div>
-      
+  <div class="form-group">
+    <%= f.label :nombre %>
+    <%= f.text_field :nombre %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :rif %>
+    <%= f.text_field :rif %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :contraseña %>
+    <%= f.text_field :contraseña %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :correo %>
+    <%= f.text_field :correo %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit :class => "btn btn-success btn-block"%>
+  </div>
+<% end %>
+
+<!-- Ends Body Content-->
+
+
     </div>
   </div><!-- Ends Modal Reg Emp-->
 
@@ -271,3 +369,4 @@
 
 </body>
 </html>
+

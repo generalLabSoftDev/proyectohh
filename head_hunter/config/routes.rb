@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :empresas
+  resources :aspirantes
   get 'editar_perfil/editarperfil'
 
   get 'home/index'

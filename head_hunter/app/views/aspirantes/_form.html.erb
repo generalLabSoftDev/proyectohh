@@ -1,0 +1,113 @@
+<%= form_for(aspirante) do |f| %>
+  <% if aspirante.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(aspirante.errors.count, "error") %> prohibited this aspirante from being saved:</h2>
+
+      <ul>
+      <% aspirante.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombres %>
+    <%= f.text_field :nombres %>
+  </div>
+
+  <div class="field">
+    <%= f.label :apellidos %>
+    <%= f.text_field :apellidos %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cedula %>
+    <%= f.number_field :cedula %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sexo %>
+    <%= f.text_field :sexo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fecha %>
+    <%= f.text_field :fecha %>
+  </div>
+
+  <div class="field">
+    <%= f.label :correo %>
+    <%= f.text_field :correo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contraseña %>
+    <%= f.text_field :contraseña %>
+  </div>
+
+  <div class="field">
+    <%= f.label :telefono %>
+    <%= f.number_field :telefono %>
+  </div>
+
+  <div class="field">
+    <%= f.label :estado %>
+    <%= f.text_field :estado %>
+  </div>
+
+  <div class="field">
+    <%= f.label :municipio %>
+    <%= f.text_field :municipio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :celular %>
+    <%= f.number_field :celular %>
+  </div>
+
+  <div class="field">
+    <%= f.label :discapacidad %>
+    <%= f.text_field :discapacidad %>
+  </div>
+
+  <div class="field">
+    <%= f.label :intereses %>
+    <%= f.text_field :intereses %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bachillerato %>
+    <%= f.text_field :bachillerato %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mencion %>
+    <%= f.text_field :mencion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :institucion %>
+    <%= f.text_field :institucion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :estudios_universitarios %>
+    <%= f.text_field :estudios_universitarios %>
+  </div>
+
+  <div class="field">
+    <%= f.label :institucion_otros_estudios %>
+    <%= f.text_field :institucion_otros_estudios %>
+  </div>
+
+  <div class="field">
+    <%= f.label :area_universidad %>
+    <%= f.text_field :area_universidad %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

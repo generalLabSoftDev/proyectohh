@@ -10,10 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161125030840) do
+ActiveRecord::Schema.define(version: 20161128011936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "aspirantes", force: :cascade do |t|
+    t.string   "nombres"
+    t.string   "apellidos"
+    t.integer  "cedula"
+    t.string   "sexo"
+    t.string   "fecha"
+    t.string   "correo"
+    t.string   "contraseña"
+    t.integer  "telefono"
+    t.string   "estado"
+    t.string   "municipio"
+    t.integer  "celular"
+    t.string   "discapacidad"
+    t.string   "intereses"
+    t.string   "bachillerato"
+    t.string   "mencion"
+    t.string   "institucion"
+    t.string   "estudios_universitarios"
+    t.string   "institucion_otros_estudios"
+    t.string   "area_universidad"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
 
   create_table "charges", force: :cascade do |t|
     t.string   "nombre"
@@ -36,6 +60,11 @@ ActiveRecord::Schema.define(version: 20161125030840) do
     t.string   "idiomalvl"
   end
 
+  create_table "competencia", id: false, force: :cascade do |t|
+    t.integer "cedula"
+    t.string  "competencia", limit: 40
+  end
+
   create_table "competencies", force: :cascade do |t|
     t.text     "descripcion"
     t.string   "nivel"
@@ -46,6 +75,22 @@ ActiveRecord::Schema.define(version: 20161125030840) do
     t.string   "tipo"
     t.string   "etiqueta"
     t.index ["charge_id"], name: "index_competencies_on_charge_id", using: :btree
+  end
+
+  create_table "empresas", force: :cascade do |t|
+    t.string   "nombre"
+    t.string   "rif"
+    t.string   "contraseña"
+    t.string   "correo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "experiencia_laboral", id: false, force: :cascade do |t|
+    t.integer "cedula"
+    t.string  "empresa",        limit: 40
+    t.string  "tiempo_empresa", limit: 40
+    t.string  "cargo",          limit: 40
   end
 
   create_table "forms", force: :cascade do |t|
